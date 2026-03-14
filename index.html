@@ -346,7 +346,10 @@
   .founder-grid { display: grid; grid-template-columns: 340px 1fr; gap: 72px; align-items: start; }
   .founder-photo { position: relative; }
   .founder-photo-inner {
-   style="background: none; padding: 0;"><img src="photo.jpg" alt="Saglara Meyer" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block;"></div>
+    width: 100%; aspect-ratio: 3/4;
+    background: linear-gradient(135deg, #e8e4de 0%, #ccc8c0 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #aaa;
   }
   .founder-badge {
     position: absolute; bottom: -14px; left: 24px;
@@ -770,7 +773,9 @@
 <section class="sec founder" id="founder">
   <div class="founder-grid">
     <div class="founder-photo">
-      <div class="founder-photo-inner">Your photo here</div>
+      <div class="founder-photo-inner" style="background: none; padding: 0;">
+        <img src="photo.jpg" alt="Saglara Meyer" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block;">
+      </div>
       <div class="founder-badge">
         <div class="founder-badge-title">Founded by</div>
         <div class="founder-badge-name">Saglara Meyer</div>
@@ -870,12 +875,12 @@
   </div>
   <div class="ft-right">
     A Stanford LEAD Community Initiative · Founded by Saglara Meyer<br>
-    <a href="mailto:info@sagameyer.com">info@sagameyer.com</a> · <a href="https://www.sagameyer.com" target="_blank">sagameyer.com</a><br>
+    <a href="/cdn-cgi/l/email-protection#4821262e27083b292f29252d312d3a662b2725"><span class="__cf_email__" data-cfemail="4e272028210e3d2f292f232b372b3c602d2123">[email&#160;protected]</span></a> · <a href="https://www.sagameyer.com" target="_blank">sagameyer.com</a><br>
     Me2We 2026 · March · Seattle, WA
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Scroll fade-in
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e, i) => {
@@ -898,11 +903,4 @@
     let current = '';
     sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
     navLinks.forEach(a => {
-      const isActive = a.getAttribute('href') === '#' + current;
-      a.style.color = isActive ? 'var(--cardinal)' : '';
-      a.style.borderBottomColor = isActive ? 'var(--cardinal)' : 'transparent';
-    });
-  });
-</script>
-</body>
-</html>
+ 
