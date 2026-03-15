@@ -827,11 +827,41 @@
     </div>
     <div>
   <a href="https://docs.google.com/forms/d/e/1FAIpQLSfLgNvOUQjU9VxY37xZNk13IKtYQWoyazT5MxGGjxj80N3cGw/viewform?usp=header" target="_blank" class="btn btn-red" style="font-size: 15px; padding: 20px 48px;">Apply for the Founding Cohort →</a>
-  // Nav active on scroll
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <div class="ft-logo">TL<span>X</span> — The Leadership Exchange</div>
+    <div class="ft-tagline">A leadership community where ideas, experience, and action meet.</div>
+  </div>
+  <div class="ft-right">
+    A Stanford LEAD Community Initiative · Founded by Saglara Meyer<br>
+    <a href="mailto:info@sagameyer.com">info@sagameyer.com</a> · <a href="https://www.sagameyer.com" target="_blank">sagameyer.com</a><br>
+    Me2We 2026 · March · Seattle, WA
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) setTimeout(() => e.target.classList.add('in'), i * 90);
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade').forEach(el => io.observe(el));
+
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
   window.addEventListener('scroll', () => {
     let current = '';
     sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
     navLinks.forEach(a => {
- 
+      const isActive = a.getAttribute('href') === '#' + current;
+      a.style.color = isActive ? 'var(--cardinal)' : '';
+      a.style.borderBottomColor = isActive ? 'var(--cardinal)' : 'transparent';
+    });
+  });
+</script>
+</body>
+</html>
