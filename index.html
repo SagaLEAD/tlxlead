@@ -90,6 +90,9 @@
   .card h3 { font-size: 24px; margin-bottom: 8px; }
   .card .meta { font-size: 13px; color: var(--charcoal-soft); margin-bottom: 18px; border-bottom: 1px solid var(--line); padding-bottom: 18px; }
   .card p { font-size: 15px; color: var(--charcoal-soft); }
+  .card.linkable { text-decoration: none; display: block; transition: border-color 0.15s ease, transform 0.15s ease; }
+.card.linkable:hover { border-color: var(--oxblood); transform: translateY(-2px); }
+.card .card-link { display: inline-block; margin-top: 14px; font-size: 13px; color: var(--oxblood); font-weight: 600; }
 
   .why {
     background: var(--oxblood); color: var(--cream-light);
@@ -140,6 +143,7 @@
   <div class="nav-links">
     <a href="#programs">Programs</a>
     <a href="#founder">About</a>
+    <a href="forum/">Forum</a>
     <a href="#join">Join</a>
   </div>
 </nav>
@@ -164,13 +168,13 @@
       <div class="meta">1:1 matched pairs · 3-month cohort · min. 1 connect/month</div>
       <p>A guided mentorship program connecting LEAD alumni and current participants. Every pair is hand-matched based on industry, challenge, and what you want to give and receive. Join as a mentor, mentee, or peer exchange.</p>
     </div>
-    <div class="card">
-      <div class="num">02</div>
-      <h3>TLX Forums</h3>
-      <div class="meta">Monthly</div>
-      <p>Each month opens with a speaker session and discussion reserved for the mentorship cohort, then opens up to the wider LEAD community for a shared conversation. Learning and exchange, in one session.</p>
-    </div>
-  </div>
+    <a class="card linkable" href="forum/">
+  <div class="num">02</div>
+  <h3>TLX Forums</h3>
+  <div class="meta">Monthly</div>
+  <p>Each month opens with a speaker session and discussion reserved for the mentorship cohort, then opens up to the wider LEAD community for a shared conversation. Learning and exchange, in one session.</p>
+  <div class="card-link">See upcoming sessions →</div>
+</a>
 </section>
 
 <section class="why tight">
